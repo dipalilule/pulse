@@ -1,0 +1,25 @@
+TO create docker images 
+1) create docker file and use required base image (e.g linux, ubantu)
+2) set required steps in the docker file (e.g installing httpd, yum update, expose port)
+3) docker build -t nameofimage . (go to the location where you have docker file created) then run docker build
+4) check docker file is created using docker images command (use sudo if not work)
+5) once image is created tag that image with below command 
+docker tag 8b8bee219b6d dipalilule/myfirstdemo:version1
+6) once docker image is tagged push that image with below command 
+docker push dipalilule/myfirstdemo:version1 
+
+
+practicals 
+
+push below 5 image to docker hub  (use google to file below dockerfiles)
+
+nginx 
+http
+jenkins 
+sample_application
+python_application 
+
+
+docker tag hello-world:latest 595552316002.dkr.ecr.us-east-1.amazonaws.com/awsprivaterepo:latest
+docker push 595552316002.dkr.ecr.us-east-1.amazonaws.com/awsprivaterepo:latest
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 595552316002.dkr.ecr.regionID.amazonaws.com
